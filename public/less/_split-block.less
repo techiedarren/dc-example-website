@@ -1,0 +1,135 @@
+.amp-split-block {
+  // intrinsic placeholder:
+  display: block;
+  position: relative;
+
+  width: 100%;
+  padding-top: 33%;
+  height: 0;
+  overflow: hidden;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__image-container {
+    width: 50%;
+    overflow: hidden;
+    padding-top: 33%;
+    position: relative;
+    float: left;
+  }
+
+  &__image {
+    background-color: #848986;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  &__editorial-container {
+    width: 50%;
+    overflow: hidden;
+    padding-top: 33%;
+    position: relative;
+    float: left;
+  }
+
+  &__editorial {
+    width: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__editorial-title {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__editorial-text {
+    font-size: 1.3vw;
+    line-height: 1.6;
+  }
+
+
+  // mobile / default
+  .amp-editorial {
+    &__editorial-title {
+      font-size: 30px;
+    }
+
+    &__editorial-text {
+      font-size: 20px;
+      display: none;
+    }
+
+    &__call-to-action {
+      background-color: white !important;
+      border: solid 2px black !important;
+      color: black !important;
+    }
+  }
+
+  // desktop
+  @media (min-width: 992px) {
+    .amp-editorial {
+      &__editorial-title {
+        font-size: 2.6vw !important;
+      }
+
+      &__editorial-text {
+        font-size: 1.4vw !important;
+        display: block !important;
+      }
+    }
+  }
+
+  // tablet
+  @media (min-width: 768px) {
+    .amp-editorial {
+      &__editorial-title {
+        font-size: 2.6vw !important;
+      }
+
+      &__editorial-text {
+        font-size: 1.6vw !important;
+        display: block !important;
+      }
+    }
+  }
+
+  &__call-to-action {
+    display: inline-block;
+    font-size: 1vw;
+    padding: 2.3%;
+    margin-top: 2%;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:after {
+      content: ' >';
+    }
+  }
+}

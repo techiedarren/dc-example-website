@@ -1,0 +1,68 @@
+.amp-image-block {
+  // intrinsic placeholder:
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 66%;
+  height: 0;
+  overflow: hidden;
+
+  &__image {
+    background-color: #848986;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  &__editorial {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__editorial-title {
+    color: #fff;
+    font-size: 4.6vw;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  &__editorial-text {
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.6;
+    margin: 3% 0;
+    padding: 0;
+  }
+
+  &__call-to-action {
+    font-size: 1vw;
+    padding: 2.3%;
+    margin-top: 2%;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:after {
+      content: ' >';
+    }
+  }
+}

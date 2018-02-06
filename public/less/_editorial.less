@@ -1,0 +1,163 @@
+.amp-editorial {
+  &__call-to-action {
+    min-width: 120px;
+    border: solid 2px white;
+    padding: 2.3% 3.2%;
+    background-color: rgba(0,0,0,0.5);
+    transition: background-color 500ms ease-in-out;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.9);
+    }
+  }
+
+  &__parent-hotspot {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__theme {
+    &--darken {
+      .amp-editorial {
+        &__editorial {
+          width: 45%;
+          padding: 5%;
+          background-color: rgba(0,0,0,0.3);
+        }
+      }
+    }
+
+    &--lighten {
+      .amp-editorial {
+        &__call-to-action {
+          background-color: black;
+          &:hover {
+            background-color: black;
+          }
+        }
+
+        &__editorial {
+          width: 45%;
+          padding: 5%;
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        &__editorial-title,
+        &__editorial-text {
+          color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+
+  }
+
+}
+
+&.amp-editorial__copy-alignment {
+  &--left {
+    .amp-editorial {
+      &__editorial {
+        text-align: left;
+      }
+
+      &__call-to-action {
+        text-align: left;
+      }
+    }
+  }
+
+  &--right {
+    .amp-editorial {
+      &__editorial {
+        text-align: right;
+      }
+
+      &__call-to-action {
+        text-align: right;
+      }
+    }
+  }
+
+  &--center {
+    .amp-editorial {
+      &__editorial {
+        text-align: center;
+      }
+
+      &__call-to-action {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.amp-editorial-alignment {
+  &--top-left {
+    .amp-editorial__editorial {
+      top: 5%;
+      left: 5%;
+      right: auto;
+      bottom: auto;
+      transform: none;
+    }
+  }
+
+  &--top-right {
+    .amp-editorial__editorial {
+      top: 5%;
+      right: 5%;
+      left: auto;
+      bottom: auto;
+      transform: none;
+    }
+  }
+
+  &--bottom-left {
+    .amp-editorial__editorial {
+      bottom: 5%;
+      left: 5%;
+      right: auto;
+      top: auto;
+      transform: none;
+    }
+  }
+
+  &--bottom-right {
+    .amp-editorial__editorial {
+      bottom: 5%;
+      right: 5%;
+      left: auto;
+      top: auto;
+      transform: none;
+    }
+  }
+
+  &__call-to-action {
+    font-size: 13px;
+    padding: 2.3%;
+    margin-top: 2%;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:after {
+      content: ' >';
+    }
+  }
+
+
+}

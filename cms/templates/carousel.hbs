@@ -1,0 +1,33 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+<script type="text/javascript" src="/js/vendor/unslider/dist/js/unslider-min.js"></script>
+
+<link rel="stylesheet" href="/js/vendor/unslider/dist/css/unslider.css">
+<link rel="stylesheet" href="/js/vendor/unslider/dist/css/unslider-dots.css">
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css"/>
+
+<div class="amp-carousel-wrapper">
+    <div class="carousel">
+        <ul>
+            {{#each slides}}
+            <li>
+                {{> mapping this }}
+            </li>
+            {{/each}}
+        </ul>
+	</div>
+</div>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('.carousel').unslider({
+            autoplay: true,
+            infinite: true,
+            nav: false,
+            arrows: false
+        });
+    });
+</script>

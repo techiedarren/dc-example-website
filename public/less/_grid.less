@@ -1,0 +1,46 @@
+.amp-grid__cell {
+  margin-top: 1.5%;
+
+  .amp-image-block__editorial {
+    width: 90%;
+  }
+
+  // mobile
+  .amp-editorial {
+    &__editorial-title {
+      font-size: 50px;
+    }
+
+    &__editorial-text {
+      font-size: 20px;
+    }
+  }
+
+  // desktop
+  @media (min-width: 992px) {
+    .amp-editorial {
+      &__editorial-title {
+        font-size: 3.6vw !important;
+      }
+
+      &__editorial-text {
+        font-size: 1.6vw !important;
+      }
+    }
+  }
+
+  // tablet
+  @media (min-width: 768px) {
+    .amp-editorial {
+      &__editorial-title {
+        font-size: 2.2vw !important;
+      }
+
+      &__editorial-text {
+        font-size: 1vw !important;
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,13 @@
+<div class="amp-grid-wrapper container-fluid">
+
+    <div class="amp-grid row">
+        {{#each gridContent as |gridItem| }}
+            <div class="amp-grid__cell col-md-{{#if itemColumnsDesktop}}{{itemColumnsDesktop}}{{else}}4{{/if}} col-sm-{{#if itemColumnsTablet}}{{itemColumnsTablet}}{{else}}4{{/if}} col-xs-{{#if itemColumnsMobile}}{{itemColumnsMobile}}{{else}}12{{/if}}">
+
+                {{> mapping gridItem type=contentBlock }}
+
+            </div>
+        {{/each}}
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+.sass-cache
+bower_components
+node_modules
+public/js/vendor
+public/css/vendor
+.tmp/
+*.iml
+public/css/app/style.css
+public/css/app/style.css.map
+public/js/app/shared/app-config.
+public/js/app/shared/i18n/lang/*.json
+.idea
+dist
+.DS_Store

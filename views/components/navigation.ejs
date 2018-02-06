@@ -1,0 +1,81 @@
+<div ui-view="topNavigation" class="ng-scope">
+<div class="mobileNav hidden-lg hidden-md visible-sm visible-xs ng-scope">
+    <nav class="top-navigation row">
+
+
+        
+        <div class="col-xs-3">
+            <button type="button" class="btn btn-link navbar-btn menu" ng-click="toggleOffCanvas()">
+                <span class="hyicon hyicon-menu"></span>
+            </button>
+        </div>
+
+        
+        <div class="col-xs-5 text-center">
+            <a class="logo" href="/"><img style="max-height:46px" src="/images/logo.jpeg"></a>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<div class="desktopNav hidden-xs hidden-sm visible-md visible-lg ng-scope">
+    <div class="row info">
+
+        
+        <div class="col-xs-2 logo navbar-padding navbar-padding-left">
+            <a class="logo" href="/">
+                <img height="46" alt="" src="/images/logo.jpeg">
+            </a>
+        </div>
+
+    </div>
+    <div class="row nav js-mainNav">
+        <div class="content-container">
+            <div class="navbar yamm navbar-default">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="top_category in categories" class="dropdown yamm-fw ng-scope">
+                        
+                        <a ui-sref="base.category( {catName: top_category.slug} )" class="js-megamenutoggle mainCategory categoryLevel ng-binding" href="#!/ct/art%252C-books%2520%2526%2520paper~~71e8647e-2cd1-4e30-8f72-02b12d462b9d">
+                            Art, Books &amp; Paper
+                            </a>
+
+                    </li><li ng-repeat="top_category in categories" class="dropdown yamm-fw ng-scope">
+                        
+                        <a ui-sref="base.category( {catName: top_category.slug} )" class="js-megamenutoggle mainCategory categoryLevel ng-binding" href="#!/ct/tech~~40187f51-5efc-402b-85e4-1e2378a9d50b">
+                            Tech
+                            </a>
+
+                    </li><li ng-repeat="top_category in categories" class="dropdown yamm-fw ng-scope">
+                        
+                        <a ui-sref="base.category( {catName: top_category.slug} )" class="js-megamenutoggle mainCategory categoryLevel ng-binding" href="#!/ct/furniture~~95e98da0-cde7-4631-acb2-b8388fec5737">
+                            Furniture
+                            </a>
+
+                    </li><li ng-repeat="top_category in categories" class="dropdown yamm-fw ng-scope">
+                        
+                        <a ui-sref="base.category( {catName: top_category.slug} )" class="js-megamenutoggle mainCategory categoryLevel ng-binding" href="#!/ct/lighting~~5aec3b5c-a24e-49f6-868f-2dfe2a242f8b">
+                            Lighting
+                            </a>
+
+                    </li><li ng-repeat="top_category in categories" class="dropdown yamm-fw ng-scope">
+                        
+                        <a ui-sref="base.category( {catName: top_category.slug} )" class="js-megamenutoggle mainCategory categoryLevel ng-binding" href="#!/ct/tableware~~d0e6354f-a100-4763-b657-0653d1b6f9c5">
+                            Tableware
+                            </a>
+
+                    </li><li ng-repeat="top_category in categories" class="dropdown yamm-fw ng-scope">
+                        
+                        <a ui-sref="base.category( {catName: top_category.slug} )" class="js-megamenutoggle mainCategory categoryLevel ng-binding" href="#!/ct/fashion~~a22a5575-c3ec-4b71-ad1e-c122080a609a">
+                            Fashion
+                            </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>

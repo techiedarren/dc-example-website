@@ -1,0 +1,8 @@
+<div content="content" class="amp-image-block amp-editorial-wrapper" style="padding-top: {{#and aspectRatio aspectRatio.w aspectRatio.h }}{{multiply (divide aspectRatio.h aspectRatio.w) 100}}{{else}}100{{/and}}%;">
+
+    <img class="amp-image-block__image"
+         src="http://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}.png" alt="">
+
+    {{> editorial editorial type="amp-image-block"}}
+
+</div>

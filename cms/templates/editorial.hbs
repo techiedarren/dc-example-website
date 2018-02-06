@@ -1,0 +1,15 @@
+<div class="amp-editorial-wrapper amp-editorial-alignment--{{#if overlayAlignment}}{{dashcase overlayAlignment}}{{else}}center{{/if}} amp-editorial__theme--{{#if overlayTheme}}{{dashcase overlayTheme}}{{else}}none{{/if}} amp-editorial__copy-alignment--{{#if alignCopyText}}{{dashcase alignCopyText}}{{else}}center{{/if}} ">
+    {{#or title text callToAction.text}}
+        <div class="amp-editorial amp-editorial__editorial {{type}}__editorial">
+            {{#if title}}
+                <h2 class="amp-editorial__editorial-title {{type}}__editorial-title">{{title}}</h2>
+            {{/if}}
+            {{#if text}}
+                <p class="amp-editorial__editorial-text {{type}}__editorial-text">{{text}}</p>
+            {{/if}}
+            {{#if callToAction.text}}
+                <a class="amp-editorial__call-to-action {{type}}__call-to-action" href="{{callToAction.url}}">{{callToAction.text}}</a>
+            {{/if}}
+        </div>
+    {{/or}}
+</div>

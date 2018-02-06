@@ -1,0 +1,27 @@
+{{#if (test this.[@type] (toRegex ".*/hero-block.json")) }}
+    {{> hero-block }}
+{{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/page.json")) }}
+    {{> page }}
+{{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/text-block")) }}
+    {{> text-block }}
+{{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/carousel.json")) }}
+    {{> carousel }}
+{{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/image-block.json")) }}
+    {{> image-block }}
+{{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/split-block.json")) }}
+    {{> split-block }}
+{{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/grid.json")) }}
+    {{> grid }}
+{{/if}}

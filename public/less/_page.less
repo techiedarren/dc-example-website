@@ -1,0 +1,25 @@
+@page-gutter-size: 7%;
+
+.amp-page {
+  &>.amp-text-block-wrapper,
+  &>.amp-image-block-wrapper,
+  &>.amp-carousel-wrapper,
+  &>.amp-video-block-wrapper,
+  &>.amp-split-block-wrapper{
+    margin: 0 @page-gutter-size;
+  }
+
+  &>.amp-hero-panel-wrapper {
+    margin: 0 0;
+  }
+
+  &>.amp-image-block-wrapper,
+  &>.amp-video-block-wrapper,
+  &>.amp-split-block-wrapper {
+    margin: 2% @page-gutter-size;
+  }
+
+  &__footer {
+    height: 20px;
+  }
+}
