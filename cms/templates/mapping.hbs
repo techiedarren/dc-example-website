@@ -25,3 +25,7 @@
 {{#if (test this.[@type] (toRegex ".*/grid.json")) }}
     {{> grid }}
 {{/if}}
+
+{{#if (test this.[@type] (toRegex ".*/stack.json")) }}
+    {{> stack }}
+{{/if}}
