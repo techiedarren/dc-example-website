@@ -1,7 +1,18 @@
-<div content="content" class="amp-hero-panel amp-editorial-wrapper" style="">
+<div content="content" class="amp-hero-panel container-fluid" style="">
 
-    <img class="amp-image-block__image"
-         src="http://{{panelContent.image.defaultHost}}/i/{{panelContent.image.endpoint}}/{{panelContent.image.name}}" alt="">
+    <picture>
+        <source srcset="{{> image-url panelContent.image fmt="webp" aspectRatio=panelContent.aspectRatio width="1400" }} 1x, {{> image-url panelContent.image fmt="webp" aspectRatio=panelContent.aspectRatio width="2048" }} 2x" media="(min-width: 769px)" type="image/webp">
+        {{#and panelContent.mobileAspectRatio panelContent.mobileAspectRatio.w panelContent.mobileAspectRatio.h }}
+        <source srcset="{{> image-url panelContent.image fmt="webp" aspectRatio=panelContent.mobileAspectRatio width="768" }} 1x, {{> image-url panelContent.image fmt="webp" aspectRatio=panelContent.mobileAspectRatio width="1536" }} 2x" media="(max-width: 768px)" type="image/webp">
+        {{/and}}
+        <source srcset="{{> image-url panelContent.image fmt="jpg" aspectRatio=panelContent.aspectRatio width="1400" }} 1x, {{> image-url panelContent.image fmt="jpg" aspectRatio=panelContent.aspectRatio width="2048" }}" media="(min-width: 769px)" type="image/jpeg">
+        {{#and panelContent.mobileAspectRatio panelContent.mobileAspectRatio.w panelContent.mobileAspectRatio.h }}
+        <source srcset="{{> image-url panelContent.image fmt="jpg" aspectRatio=panelContent.mobileAspectRatio width="768" }} 1x, {{> image-url panelContent.image fmt="jpg" aspectRatio=panelContent.mobileAspectRatio width="1536" }} 2x" media="(max-width: 768px)" type="image/jpeg">
+        {{/and}}
+
+        <img class="amp-image-block__image"
+         src="{{> image-url panelContent.image fmt="jpg" aspectRatio=panelContent.aspectRatio width="2048" }}" alt="">
+    </picture>
 
     {{> editorial panelContent.editorial type="amp-image-block"}}
 

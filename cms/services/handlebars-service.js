@@ -29,7 +29,7 @@ function registerHelpers(Handlebars){
             'object',
             'regex',
             'string',
-            'uri'
+            'url'
         ],
         {
             handlebars: Handlebars
@@ -75,7 +75,7 @@ function replaceMarker(text, id, value){
 
 function processSingleTemplate(templateName, data, state){
     state.includes++;
-    if(state.includes > 100){
+    if(state.includes > 500){
         return Q.reject(new Error("maximum template recursion reached"));
     }
 

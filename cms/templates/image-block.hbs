@@ -1,7 +1,35 @@
-<div content="content" class="amp-image-block amp-editorial-wrapper" style="padding-top: {{#and aspectRatio aspectRatio.w aspectRatio.h }}{{multiply (divide aspectRatio.h aspectRatio.w) 100}}{{else}}100{{/and}}%;">
+<style>
+    {{#and aspectRatio aspectRatio.w aspectRatio.h }}
+    .image_block_{{snakecase this.[@id]}} {
+        padding-top: {{multiply (divide aspectRatio.h aspectRatio.w) 100}}%;
+    }
+    {{/and}}
 
-    <img class="amp-image-block__image"
-         src="http://{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}.png" alt="">
+    {{#and mobileAspectRatio mobileAspectRatio.w mobileAspectRatio.h }}
+    @media (max-width: 768px) {
+        .image_block_{{snakecase this.[@id]}} {
+            padding-top: {{multiply (divide mobileAspectRatio.h mobileAspectRatio.w) 100}}%;
+        }
+    }
+    {{/and}}
+</style>
+
+<div content="content" class="amp-image-block amp-editorial-wrapper image_block_{{snakecase this.[@id]}}" style="">
+
+    <picture>
+        <source srcset="{{> image-url image fmt="webp" aspectRatio=aspectRatio width="1400" }} 1x, {{> image-url image fmt="webp" aspectRatio=aspectRatio width="2048" }} 2x" media="(min-width: 769px)" type="image/webp">
+        {{#and mobileAspectRatio mobileAspectRatio.w mobileAspectRatio.h }}
+        <source srcset="{{> image-url image fmt="webp" aspectRatio=mobileAspectRatio width="768" }} 1x, {{> image-url image fmt="webp" aspectRatio=mobileAspectRatio width="1536" }} 2x" media="(max-width: 768px)" type="image/webp">
+        {{/and}}
+        <source srcset="{{> image-url image fmt="jpg" aspectRatio=aspectRatio width="1400" }} 1x, {{> image-url image fmt="jpg" aspectRatio=aspectRatio width="2048" }} 2x" media="(min-width: 769px)" type="image/jpeg">
+        {{#and mobileAspectRatio mobileAspectRatio.w mobileAspectRatio.h }}
+        <source srcset="{{> image-url image fmt="jpg" aspectRatio=mobileAspectRatio width="768" }} 1x, {{> image-url image fmt="jpg" aspectRatio=mobileAspectRatio width="1536" }} 2x" media="(max-width: 768px)" type="image/jpeg">
+        {{/and}}
+
+
+        <img class="amp-image-block__image"
+         src="{{> image-url image fmt="jpg" aspectRatio=aspectRatio width="2048" }}" alt="">
+    </picture>
 
     {{> editorial editorial type="amp-image-block"}}
 
