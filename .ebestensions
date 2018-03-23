@@ -1,0 +1,3 @@
+container_commands:
+  01_bower_install:
+    command: "export PATH=$PATH; $NODE_HOME/bin/node ./node_modules/bowe/bin/bower -V install --allow-root -F > /tmp/01_bower_install.log"
